@@ -26,6 +26,7 @@ body {
   color: var(--text);
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 a {
@@ -95,11 +96,13 @@ a {
   color: var(--gold);
   font-size: 0.9rem;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .hero {
   position: relative;
   min-height: 96vh;
+  min-height: 96dvh;
   display: grid;
   align-items: end;
   overflow: hidden;
@@ -711,14 +714,18 @@ h3 {
 
   .hero {
     min-height: 94vh;
+    min-height: 94dvh;
     padding: 104px 18px 20px;
   }
 
   h1 {
-    font-size: clamp(3.7rem, 18vw, 5.4rem);
+    font-size: clamp(2.8rem, 14vw, 5.4rem);
   }
 
-  .hero-stats,
+  .hero-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .timeline,
   .feature-grid,
   .lens-grid {
@@ -732,6 +739,7 @@ h3 {
 
   .marko-portrait {
     max-width: 320px;
+    margin-inline: auto;
   }
 
   .timeline article,
@@ -741,5 +749,20 @@ h3 {
 
   .site-footer {
     flex-direction: column;
+  }
+
+  .bio-drawers .read-more p:has(> strong:only-child) {
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  .header-cta {
+    padding: 0 10px;
+    font-size: 0.76rem;
+  }
+
+  .hero {
+    padding: 96px 14px 20px;
   }
 }
