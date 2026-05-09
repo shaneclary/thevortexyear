@@ -219,10 +219,16 @@ function resizeRenderer() {
   const mobile = window.matchMedia("(max-width: 760px)").matches;
   if (mobile) {
     camera.position.set(0, 12, 210);
-    if (coil) coil.position.set(0, 0, 0);
+    if (coil) {
+      coil.position.set(0, 0, 0);
+      coil.scale.setScalar(1.3);
+    }
   } else {
     camera.position.set(0, 14, 250);
-    if (coil) coil.position.set(82, 2, 0);
+    if (coil) {
+      coil.position.set(82, 2, 0);
+      coil.scale.setScalar(1);
+    }
   }
 }
 
