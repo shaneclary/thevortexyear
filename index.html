@@ -34,7 +34,7 @@
         <a href="#method">Method</a>
         <a href="#reserve">Reserve</a>
       </nav>
-      <a class="header-cta" href="#reserve">Reserve $39.69</a>
+      <a class="header-cta" href="#reserve">Reserve</a>
     </header>
 
     <main id="top">
@@ -449,8 +449,8 @@
               <a
                 id="monthly-reserve-button"
                 class="button primary wide"
-                href="mailto:hello@thevortexyear.com?subject=Reserve%20monthly%20path%20in%20The%20Vortex%20Year&body=I%20want%20to%20reserve%20my%20spot%20in%20The%20Vortex%20Year%20for%20%2439.69%20and%20start%20monthly%20access%20at%20launch."
-                data-payment-url=""
+                href="/api/checkout?tier=monthly"
+                data-payment-url="/api/checkout?tier=monthly"
               >
                 Reserve monthly path
               </a>
@@ -468,8 +468,8 @@
               <a
                 id="annual-reserve-button"
                 class="button secondary wide"
-                href="mailto:hello@thevortexyear.com?subject=Reserve%20annual%20path%20in%20The%20Vortex%20Year&body=I%20want%20to%20reserve%20my%20spot%20for%20%2439.69%20and%20pay%20the%20remaining%20%24357.24%20toward%20the%20%24396.93%20annual%20course%20before%20launch."
-                data-payment-url=""
+                href="/api/checkout?tier=annual-reserve"
+                data-payment-url="/api/checkout?tier=annual-reserve"
               >
                 Reserve annual path
               </a>
@@ -487,8 +487,8 @@
               <a
                 id="annual-full-button"
                 class="button secondary wide"
-                href="mailto:hello@thevortexyear.com?subject=Prepay%20annual%20for%20The%20Vortex%20Year&body=I%20want%20to%20prepay%20%24300%20for%20the%20full%20annual%20The%20Vortex%20Year%20course."
-                data-payment-url=""
+                href="/api/checkout?tier=annual-prepay"
+                data-payment-url="/api/checkout?tier=annual-prepay"
               >
                 Prepay annual
               </a>

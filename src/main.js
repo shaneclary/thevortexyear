@@ -196,6 +196,7 @@ function loadCoil() {
       coil.rotation.z = 0.2;
       coil.position.set(82, 2, 0);
       scene.add(coil);
+      resizeRenderer();
       setStatus("ready");
     },
     undefined,
@@ -215,10 +216,13 @@ function resizeRenderer() {
   camera.aspect = width / Math.max(height, 1);
   camera.updateProjectionMatrix();
 
-  if (width < 760) {
-    camera.position.set(0, 24, 330);
+  const mobile = window.matchMedia("(max-width: 760px)").matches;
+  if (mobile) {
+    camera.position.set(0, 12, 210);
+    if (coil) coil.position.set(0, 0, 0);
   } else {
     camera.position.set(0, 14, 250);
+    if (coil) coil.position.set(82, 2, 0);
   }
 }
 

@@ -696,6 +696,40 @@ h3 {
   }
 }
 
+@media (max-width: 760px) {
+  .hero {
+    min-height: 0;
+    align-items: stretch;
+    grid-template-columns: 1fr;
+    grid-auto-rows: max-content;
+    row-gap: 28px;
+    padding-bottom: 28px;
+  }
+
+  .hero-bg,
+  .hero-shade {
+    inset: 0;
+  }
+
+  #vortex-canvas {
+    position: relative;
+    inset: auto;
+    z-index: 1;
+    width: 100%;
+    height: clamp(280px, 64vw, 420px);
+    order: 2;
+  }
+
+  .hero-content {
+    order: 1;
+    padding-bottom: 0;
+  }
+
+  .hero-stats {
+    order: 3;
+  }
+}
+
 @media (max-width: 620px) {
   .site-header {
     padding: 14px 16px;
@@ -713,9 +747,7 @@ h3 {
   }
 
   .hero {
-    min-height: 94vh;
-    min-height: 94dvh;
-    padding: 104px 18px 20px;
+    padding: 104px 18px 28px;
   }
 
   h1 {
